@@ -1,0 +1,32 @@
+
+{% extends "base.html" %}
+
+{% block title %}Dashboard - CloudPaaS{% endblock %}
+
+{% block content %}
+<div class="dashboard">
+    <h1>Hello, {{ session.get('user_name') }}! 👋</h1>
+    <p>Welcome to your Cloud Computing dashboard.</p>
+
+    <div class="cards">
+        <div class="dashboard-card">
+            <div class="icon">☁️</div>
+            <h2>Cloud Platform</h2>
+            <p>Your application is running on Microsoft Azure.</p>
+        </div>
+
+        <div class="dashboard-card">
+            <div class="icon">🎓</div>
+            <h2>Student Space</h2>
+            <p>Access your student information.</p>
+            <a href="{{ url_for('student') }}">View Student Page →</a>
+        </div>
+
+        <div class="dashboard-card">
+            <div class="icon">🚀</div>
+            <h2>PaaS Deployment</h2>
+            <p>Application deployed using Azure App Service.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

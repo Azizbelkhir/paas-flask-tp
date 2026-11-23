@@ -1,0 +1,36 @@
+
+{% extends "base.html" %}
+
+{% block title %}Sign Up - CloudPaaS{% endblock %}
+
+{% block content %}
+<div class="auth-container">
+    <div class="auth-card">
+        <div class="icon">🎓</div>
+        <h1>Create Account</h1>
+        <p class="subtitle">Join our Cloud Computing platform</p>
+
+        <form method="POST">
+            <label>Full Name</label>
+            <input type="text" name="name"
+                   placeholder="Your full name" required>
+
+            <label>Email Address</label>
+            <input type="email" name="email"
+                   placeholder="student@example.com" required>
+
+            <label>Password</label>
+            <input type="password" name="password"
+                   placeholder="Minimum 8 characters"
+                   minlength="8" required>
+
+            <button type="submit">Create Account →</button>
+        </form>
+
+        <p class="bottom-text">
+            Already have an account?
+            <a href="{{ url_for('login') }}">Login</a>
+        </p>
+    </div>
+</div>
+{% endblock %}
